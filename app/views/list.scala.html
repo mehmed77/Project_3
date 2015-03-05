@@ -1,0 +1,38 @@
+@(student: List[Students])
+
+
+
+@main("List") {
+    @navbar()
+
+
+    <br/><br/><br/>
+    <div class="container bg-success"><div class="col-xs-3"></div>
+        <div class="col-xs-6">
+        <h1 class="alert-info text-center">Talabalar ro'yxati</h1>
+        <table class="table table-striped bg-danger">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>F.I.SH</th>
+                    <th>Tel number</th>
+                    <th>E-mail</th>
+                </tr>
+            </thead>
+            <tbody>
+            @for(talaba<-student){
+                <tr>
+                    <td>@talaba.id</td>
+                    <td>@talaba.name</td>
+                    <td>@talaba.tel</td>
+                    <td>@talaba.mail</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+
+        </div>
+    </div>
+
+
+}

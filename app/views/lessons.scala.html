@@ -1,0 +1,123 @@
+@(lesson: List[Days],week: List[WeekDays],less: List[Lessons])
+@main("Lessons"){
+
+  @navbar()
+
+  <br />
+  <br />
+  <br />
+  <div class="container bg-success"><div class="col-xs-2"></div>
+  <div class="col-xs-8">
+    <h1 class="alert-info text-center">403-Amaliy dars jadvali</h1>
+
+    <table class="table table-striped bg-danger">
+
+        <tbody>
+            <tr>
+                <th>@week(0).day</th>
+                <th>@week(1).day</th>
+            </tr>
+            <tr>
+                <td>
+                    <table>
+                        @for(tir <- lesson) {
+                            @if(tir.days == 1) {
+
+                                    <tr>
+                                        <td>
+                                                @tir.lesson.name
+                                       </td>
+                                    </tr>
+                            }
+                        }
+                    </table>
+                </td>
+                <td>
+                    <table>
+                    @for(tir <- lesson) {
+                        @if(tir.days == 2) {
+
+                            <tr>
+                                <td>
+                                @tir.lesson.name
+                                </td>
+                            </tr>
+                        }
+                    }
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <th>@week(2).day</th>
+                <th>@week(3).day</th>
+            </tr>
+            <tr>
+                <td>
+                    <table>
+                    @for(tir <- lesson) {
+                        @if(tir.days == 3) {
+
+                            <tr>
+                                <td>
+                                @tir.lesson.name
+                                </td>
+                            </tr>
+                        }
+                    }
+                    </table>
+                </td>
+                <td>
+                    <table>
+                    @for(tir <- lesson) {
+                        @if(tir.days == 4) {
+
+                            <tr>
+                                <td>
+                                @tir.lesson.name
+                                </td>
+                            </tr>
+                        }
+                    }
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <th>@week(4).day</th>
+                <th>@week(5).day</th>
+            </tr>
+            <tr>
+                <td>
+                    <table>
+                    @for(tir <- lesson) {
+                        @if(tir.days == 5) {
+
+                            <tr>
+                                <td>
+                                @tir.lesson.name
+                                </td>
+                            </tr>
+                        }
+                    }
+                    </table>
+                </td>
+                <td>
+                    <table>
+                    @for(tir <- lesson) {
+                        @if(tir.days == 6) {
+
+                            <tr>
+                                <td>
+                                @tir.lesson.name
+                                </td>
+                            </tr>
+                        }
+                    }
+                    </table>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+  </div>
+  </div>
+}
